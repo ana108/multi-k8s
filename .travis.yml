@@ -14,7 +14,7 @@ after_success:
     - docker build -t anastasiya/multi-server ./server
     - docker build -t anastasiya108/multi-worker ./worker
     # Log in to the docker CLI
-    - echo "$DOCKER_PASSWORD" | "docker login -u "$DOCKER_ID" --password-stdin
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     # Take those images and push them to dockerhub
     - docker push anastasiya108/multi-client
     - docker push anastasiya108/multi-nginx
