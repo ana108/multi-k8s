@@ -21,14 +21,14 @@ after_success:
     - docker push anastasiya108/multi-server
     - docker push anastasiya108/multi-worker
 
-#deploy:
-#    provider: elasticbeanstalk
-#    region: "ca-central-1"
-#    app: "multi-docke"
-#    env: "MultiDocke-env-1"
-#    bucket_name: "elasticbeanstalk-ca-central-1-522650954375"
-#    bucket_path: "docker-multi"
-#    on:
-#        branch: master
-#    access_key_id: $AWS_ACCESS_KEY
-#    secret_access_key: $AWS_SECRET_KEY
+deploy:
+    provider: elasticbeanstalk
+    region: "ca-central-1"
+    app: "multi-docke"
+    env: "MultiDocke-env-1"
+    bucket_name: "elasticbeanstalk-ca-central-1-522650954375"
+    bucket_path: "docker-multi"
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
