@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+    name: anastasiyaandrushchak-ca-tls
+spec:
+    secretName: anastasiyaandrushchak-ca
+    issuerRef: 
+        name: letsencrypt-prod
+        kind: ClusterIssuer
+    commonName: anastasiyaandrushchak.ca
+    dnsNames:
+        - anastaisyaandrushchak.ca
+        - www.anastasiyaandrushchak.ca
+    acme:
+        config:
+            - http01:
+                ingressClass: nginx
+              domains:
+                - anastasiyaandrushchak.ca
+                - www.anastasiyaandrushchak.ca
