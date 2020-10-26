@@ -9,7 +9,7 @@ spec:
         kind: ClusterIssuer
     commonName: anastasiyaandrushchak.ca
     dnsNames:
-        - anastaisyaandrushchak.ca
+        - anastasiyaandrushchak.ca
         - www.anastasiyaandrushchak.ca
     acme:
         config:
